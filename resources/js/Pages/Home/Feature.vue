@@ -44,7 +44,7 @@
                                 </div>
                             </div>
                             <div class="ml-4">
-                                <h4 class="text-lg leading-6 font-medium text-gray-900">深入浅出每个交易环节</h4>
+                                <h4 class="text-lg leading-6 font-medium text-gray-900">剖析每个交易环节</h4>
                                 <p class="mt-2 text-base leading-6 text-gray-500">
                                     趋势分析、入场标准图、亚当理论、入场方式、止损止盈、资金管理 ...
                                 </p>

@@ -13,5 +13,9 @@ Route::group([
 ], function (Router $router) {
 
     $router->get('/', 'HomeController@index');
+    $router->resource('tags', 'TagController');
+    $router->resource('types', 'TypeController');
+    $router->resource('lessons', 'LessonController');
+    $router->resource('videos', 'VideoController');
 
 });

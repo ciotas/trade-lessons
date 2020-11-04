@@ -13,5 +13,10 @@ return [
         'extensions'    => '扩展',
         'scaffold'      => '代码生成器',
         'icons'         => '图标',
+        'tags'          => '标签',
+        'types'         => '分类',
+        'lessons'       => '课程',
+        'videos'        => '视频',
+
     ],
 ];

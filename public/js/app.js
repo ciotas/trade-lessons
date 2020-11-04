@@ -3046,6 +3046,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 
 
 
@@ -25522,7 +25523,7 @@ var render = function() {
     "div",
     { staticClass: "min-h-screen bg-gray-100" },
     [
-      _c("nav", { staticClass: "bg-light border-b border-gray-100" }, [
+      _c("nav", { staticClass: "border-b border-gray-100" }, [
         _c("div", { staticClass: "max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" }, [
           _c("div", { staticClass: "flex justify-between h-16" }, [
             _c("div", { staticClass: "flex" }, [
@@ -25960,7 +25961,7 @@ var render = function() {
                       active: _vm.route().current("dashboard")
                     }
                   },
-                  [_vm._v("\n                    Dashboard\n                ")]
+                  [_vm._v("\n                    首页\n                ")]
                 )
               ],
               1
@@ -27345,7 +27346,7 @@ var staticRenderFns = [
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "ml-4" }, [
       _c("h4", { staticClass: "text-lg leading-6 font-medium text-gray-900" }, [
-        _vm._v("深入浅出每个交易环节")
+        _vm._v("剖析每个交易环节")
       ]),
       _vm._v(" "),
       _c("p", { staticClass: "mt-2 text-base leading-6 text-gray-500" }, [
