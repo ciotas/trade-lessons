@@ -39,7 +39,8 @@ class LessonController extends AdminController
                 });;
 
             $grid->filter(function (Grid\Filter $filter) {
-                $filter->equal('id');
+                $filter->like('name');
+                $filter->equal('type_id')->select(Type::all()->pluck('name', 'id'));
             });
         });
     }
@@ -58,7 +59,9 @@ class LessonController extends AdminController
             $show->field('name');
             $show->field('price');
             $show->field('crossed_price');
-            $show->field('type_id');
+            $show->field('type_id')->as(function($type_id) {
+                return Type::find($type_id)->name ?? '';
+            });
             $show->field('cover_img')->image();
 //            ->as(function ($cover_img) {
 //                return Storage::url($cover_img);
