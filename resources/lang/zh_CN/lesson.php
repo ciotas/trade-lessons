@@ -11,6 +11,7 @@ return [
         'type_id' => '分类',
         'cover_img' => '封面图',
         'brief' => '介绍',
+        'tags'  => '标签'
     ],
     'options' => [
     ],

@@ -2,8 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a7877c7d-a63c-4b66-8874-7710602e843c" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.env.example" beforeDir="false" afterPath="$PROJECT_DIR$/.env.example" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/tongmeng.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/tongmeng.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Admin/Controllers/LessonController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Admin/Controllers/LessonController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Admin/Controllers/VideoController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Admin/Controllers/VideoController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Admin/Repositories/Lesson.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Admin/Repositories/Lesson.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Middleware/VerifyCsrfToken.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Middleware/VerifyCsrfToken.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Lesson.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Lesson.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Tag.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Tag.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Video.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Video.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/filesystems.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/filesystems.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/lang/zh_CN/lesson.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/zh_CN/lesson.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/lang/zh_CN/video.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/zh_CN/video.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -146,10 +161,19 @@
       <path value="$PROJECT_DIR$/vendor/doctrine/event-manager" />
       <path value="$PROJECT_DIR$/vendor/aliyuncs/oss-sdk-php" />
       <path value="$PROJECT_DIR$/vendor/jacobcyl/ali-oss-storage" />
+      <path value="$PROJECT_DIR$/vendor/clagiordano/weblibs-configmanager" />
+      <path value="$PROJECT_DIR$/vendor/danielstjules/stringy" />
+      <path value="$PROJECT_DIR$/vendor/mtdowling/jmespath.php" />
+      <path value="$PROJECT_DIR$/vendor/alibabacloud/sdk" />
+      <path value="$PROJECT_DIR$/vendor/alibabacloud/client" />
+      <path value="$PROJECT_DIR$/vendor/adbario/php-dot-notation" />
+      <path value="$PROJECT_DIR$/vendor/symfony/psr-http-message-bridge" />
     </include_path>
   </component>
   <component name="ProjectId" id="1jgApcA8ouJ3fhoQO95R1hy6G10" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -159,6 +183,12 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="nodejs_package_manager_path" value="npm" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/public/js" />
+      <recent name="$PROJECT_DIR$/public" />
+    </key>
   </component>
   <component name="RunManager">
     <configuration name="phpunit.xml" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
@@ -193,7 +223,41 @@
       <workItem from="1604475498265" duration="2969000" />
       <workItem from="1604479652383" duration="58000" />
       <workItem from="1604479712574" duration="14000" />
-      <workItem from="1604480138239" duration="999000" />
+      <workItem from="1604480138239" duration="1033000" />
+      <workItem from="1604483543553" duration="757000" />
+      <workItem from="1604492762875" duration="353000" />
+      <workItem from="1604493187960" duration="1065000" />
+      <workItem from="1604495036086" duration="148000" />
+      <workItem from="1604495469006" duration="318000" />
+      <workItem from="1604497919144" duration="359000" />
+      <workItem from="1604499759078" duration="23000" />
+      <workItem from="1604499795734" duration="7000" />
+      <workItem from="1604499833138" duration="45000" />
+      <workItem from="1604499945773" duration="83000" />
+      <workItem from="1604500056306" duration="362000" />
+      <workItem from="1604501092365" duration="2658000" />
+      <workItem from="1604544067035" duration="535000" />
+      <workItem from="1604547012590" duration="96000" />
+      <workItem from="1604548899839" duration="1516000" />
+      <workItem from="1604550986906" duration="2016000" />
+      <workItem from="1604553667022" duration="158000" />
+      <workItem from="1604556850121" duration="1271000" />
+      <workItem from="1604558313022" duration="138000" />
+      <workItem from="1604558494059" duration="802000" />
+      <workItem from="1604559549006" duration="465000" />
+      <workItem from="1604560271979" duration="84000" />
+      <workItem from="1604560359800" duration="13000" />
+      <workItem from="1604560449629" duration="352000" />
+      <workItem from="1604560937824" duration="2476000" />
+      <workItem from="1604563787887" duration="3895000" />
+      <workItem from="1604569861862" duration="745000" />
+      <workItem from="1604570932507" duration="102000" />
+      <workItem from="1604571104322" duration="27000" />
+      <workItem from="1604571187203" duration="93000" />
+      <workItem from="1604571290691" duration="6000" />
+      <workItem from="1604571307311" duration="31000" />
+      <workItem from="1604571412758" duration="54000" />
+      <workItem from="1604571481846" duration="223000" />
     </task>
     <servers />
   </component>
@@ -205,9 +269,13 @@
       <screen x="0" y="23" width="1280" height="727" />
     </state>
     <state x="364" y="196" key="#com.intellij.fileTypes.FileTypeChooser/0.23.1280.727@0.23.1280.727" timestamp="1604286142228" />
-    <state x="305" y="74" width="670" height="676" key="search.everywhere.popup" timestamp="1604479656167">
+    <state x="378" y="148" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1604571312482">
       <screen x="0" y="23" width="1280" height="727" />
     </state>
-    <state x="305" y="74" width="670" height="676" key="search.everywhere.popup/0.23.1280.727@0.23.1280.727" timestamp="1604479656167" />
+    <state x="378" y="148" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.23.1280.727@0.23.1280.727" timestamp="1604571312482" />
+    <state x="305" y="74" width="670" height="676" key="search.everywhere.popup" timestamp="1604568622605">
+      <screen x="0" y="23" width="1280" height="727" />
+    </state>
+    <state x="305" y="74" width="670" height="676" key="search.everywhere.popup/0.23.1280.727@0.23.1280.727" timestamp="1604568622605" />
   </component>
 </project>

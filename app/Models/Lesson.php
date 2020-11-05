@@ -14,4 +14,14 @@ class Lesson extends Model
 
 	protected $fillable = ['name', 'price', 'crossed_price', 'type_id', 'cover_img', 'brief'];
 
+    public function type()
+    {
+        return $this->belongsTo(Type::class);
+	}
+
+    public function tags()
+    {
+        return $this->belongsToMany(Tag::class, Tagable::class);
+	}
+
 }

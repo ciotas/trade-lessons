@@ -2,7 +2,9 @@
 
 namespace App\Admin\Controllers;
 
+use App\Admin\Renderable\TagTable;
 use App\Admin\Repositories\Lesson;
+use App\Models\Tag;
 use App\Models\Type;
 use Dcat\Admin\Form;
 use Dcat\Admin\Grid;
@@ -20,7 +22,7 @@ class LessonController extends AdminController
      */
     protected function grid()
     {
-        return Grid::make(new Lesson(), function (Grid $grid) {
+        return Grid::make(new Lesson('tags'), function (Grid $grid) {
             $grid->column('id')->sortable();
             $grid->column('name');
             $grid->column('price');
@@ -28,6 +30,9 @@ class LessonController extends AdminController
             $grid->column('type_id')->display(function ($val) {
                 return Type::find($val)->name ?? '';
             });
+            $grid->column('tags')->display(function ($tags) {
+                return array_column($tags, 'name');
+            })->label();
             $grid->column('cover_img')->image('', 50,50);
             $grid->column('brief')
                 ->display('查看') // 设置按钮名称
@@ -54,18 +59,19 @@ class LessonController extends AdminController
      */
     protected function detail($id)
     {
-        return Show::make($id, new Lesson(), function (Show $show) {
+        return Show::make($id, new Lesson('tags'), function (Show $show) {
             $show->field('id');
             $show->field('name');
+            $show->field('tags')->as(function ($tags) {
+                return array_column($tags, 'name');
+            })->label();
             $show->field('price');
             $show->field('crossed_price');
             $show->field('type_id')->as(function($type_id) {
                 return Type::find($type_id)->name ?? '';
             });
             $show->field('cover_img')->image();
-//            ->as(function ($cover_img) {
-//                return Storage::url($cover_img);
-//            })
+
             $show->field('brief');
             $show->field('created_at');
             $show->field('updated_at');
@@ -79,9 +85,17 @@ class LessonController extends AdminController
      */
     protected function form()
     {
-        return Form::make(new Lesson(), function (Form $form) {
+        return Form::make(new Lesson('tags'), function (Form $form) {
             $form->display('id');
-            $form->text('name');
+            $form->text('name')->required();
+            $form->multipleSelectTable('tags')
+                ->from(TagTable::make([]))  //'id' => $form->getKey() 设置渲染类实例，并传递自定义参数
+                ->model(Tag::class, 'id', 'name')  // 设置编辑数据显示
+                ->customFormat(function ($v) {
+                    if (!$v) return [];
+                    // 这一步非常重要，需要把数据库中查出来的二维数组转化成一维数组
+                    return array_column($v, 'id');
+                });
             $form->decimal('price');
             $form->decimal('crossed_price');
             $form->select('type_id')->options(Type::all()->pluck('name', 'id'));
@@ -89,6 +103,7 @@ class LessonController extends AdminController
             $form->image('cover_img')->accept('jpg,png,gif,jpeg')->move('covers')->uniqueName()->autoUpload();;
             $form->display('created_at');
             $form->display('updated_at');
+
         });
     }
 }

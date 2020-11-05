@@ -67,12 +67,12 @@ return [
 
         'oss' => [
                 'driver'        => 'oss',
-                'access_id'     => env('ALI_ACCESS_ID'),
-                'access_key'    => env('ALI_ACCESS_KEY'),
-                'bucket'        => 'tongmeng-lessons',
-                'endpoint'      => 'oss-cn-hangzhou.aliyuncs.com', // OSS 外网节点或自定义外部域名
+                'access_id'     => env('ALIYUN_ACCESS_ID'),
+                'access_key'    => env('ALIYUN_ACCESS_KEY'),
+                'bucket'        => env('ALIYUN_OSS_BUCKET_KEY'),
+                'endpoint'      => env('ALIYUN_OSS_ENDPOINT'), // OSS 外网节点或自定义外部域名
 //                'endpoint_internal' => 'oss-cn-hangzhou-internal.aliyuncs.com', // v2.0.4 新增配置属性，如果为空，则默认使用 endpoint 配置(由于内网上传有点小问题未解决，请大家暂时不要使用内网节点上传，正在与阿里技术沟通中)
-                'cdnDomain'     => 'oss.bitime.xin', // 如果isCName为true, getUrl会判断cdnDomain是否设定来决定返回的url，如果cdnDomain未设置，则使用endpoint来生成url，否则使用cdn
+                'cdnDomain'     => env('ALIYUN_OSS_CND_DOMAIN'), // 如果isCName为true, getUrl会判断cdnDomain是否设定来决定返回的url，如果cdnDomain未设置，则使用endpoint来生成url，否则使用cdn
                 'ssl'           => false, // true to use 'https://' and false to use 'http://'. default is false,
                 'isCName'       => false, // 是否使用自定义域名,true: 则Storage.url()会使用自定义的cdn或域名生成文件url， false: 则使用外部节点生成url
                 'debug'         => false

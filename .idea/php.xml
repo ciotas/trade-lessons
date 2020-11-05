@@ -127,6 +127,13 @@
       <path value="$PROJECT_DIR$/vendor/doctrine/event-manager" />
       <path value="$PROJECT_DIR$/vendor/aliyuncs/oss-sdk-php" />
       <path value="$PROJECT_DIR$/vendor/jacobcyl/ali-oss-storage" />
+      <path value="$PROJECT_DIR$/vendor/clagiordano/weblibs-configmanager" />
+      <path value="$PROJECT_DIR$/vendor/danielstjules/stringy" />
+      <path value="$PROJECT_DIR$/vendor/mtdowling/jmespath.php" />
+      <path value="$PROJECT_DIR$/vendor/alibabacloud/sdk" />
+      <path value="$PROJECT_DIR$/vendor/alibabacloud/client" />
+      <path value="$PROJECT_DIR$/vendor/adbario/php-dot-notation" />
+      <path value="$PROJECT_DIR$/vendor/symfony/psr-http-message-bridge" />
     </include_path>
   </component>
   <component name="PhpProjectSharedConfiguration" php_language_level="7" />

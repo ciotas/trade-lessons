@@ -6,7 +6,7 @@ return [
     ],
     'fields' => [
         'name' => '视频名',
-        'videoId' => '阿里云视频id',
+        'videoId' => '云视频',
         'duration' => '时长',
         'corver_url' => '封面',
         'lesson_id' => '所属课程',
