@@ -13,6 +13,11 @@ use Symfony\Component\Translation\Exception\InvalidResourceException;
 
 class VideoController extends Controller
 {
+    public function test(Request $request)
+    {
+//        $aliCloud = new AliCloud();
+//        return $res = $aliCloud->deleteVideos('06a673d646c8467da5956be9c7bfab8f');
+    }
     /**
      * @param Request $request
      * @param AliCloud $aliCloud
@@ -176,10 +181,10 @@ class VideoController extends Controller
     {
         $video = Video::find($request->video_id);
         if ($video) {
-            if ($video->Video_id) {
-                dispatch(new CoverVideoJob($video->Video_id));
+            if ($video->videoId) {
+                dispatch(new CoverVideoJob($video->videoId));
             }
-            $video->Video_id = $request->videoId;
+            $video->videoId = $request->videoId;
             $video->save();
             return response()->json(['status' => 'success']);
         }

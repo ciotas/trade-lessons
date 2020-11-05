@@ -2,6 +2,7 @@
 
 namespace App\Jobs;
 
+use App\Services\AliCloud;
 use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Foundation\Bus\Dispatchable;
@@ -12,7 +13,7 @@ class CoverVideoJob implements ShouldQueue
 {
     use Dispatchable, InteractsWithQueue, Queueable, SerializesModels;
 
-    protected $aliCloud, $videoId;
+    protected $videoId;
 
     /**
      * Create a new job instance.
@@ -30,8 +31,12 @@ class CoverVideoJob implements ShouldQueue
      *
      * @return void
      */
-    public function handle()
+    public function handle(AliCloud $aliCloud)
     {
-        $this->aliCloud->deleteVideos($this->videoId);
+        try {
+            $aliCloud->deleteVideos($this->videoId);
+        } catch (\Exception $e) {
+            \Log::error('删除视频失败'.$e->getMessage());
+        }
     }
 }

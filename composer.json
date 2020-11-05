@@ -17,9 +17,11 @@
         "inertiajs/inertia-laravel": "^0.2.4",
         "jacobcyl/ali-oss-storage": "^2.1",
         "laravel/framework": "^8.12",
+        "laravel/horizon": "^5.4",
         "laravel/jetstream": "^1.5",
         "laravel/sanctum": "^2.6",
         "laravel/tinker": "^2.5",
+        "predis/predis": "^1.1",
         "symfony/psr-http-message-bridge": "^2.0",
         "tightenco/ziggy": "^0.9.4"
     },

@@ -5,12 +5,10 @@
             <div class="col-md-10">
                 <form class="form-horizontal">
                     <input type="hidden" name="_token" value="{{ csrf_token() }}">
-                    <div class="form-group">
-                        <label for="rank" class="col-sm-2 control-label">选择视频</label>
-                        <div class="col-sm-10">
-                            <div>
-                                <input type="file" id="fileUpload{{$id}}">
-                            </div>
+                    <div class="input-group mb-3">
+                        <div class="custom-file">
+                            <input type="file" class="custom-file-input" id="fileUpload{{$id}}" aria-describedby="inputGroupFileAddon01">
+                            <label class="custom-file-label" for="fileUpload{{$id}}">选择视频</label>
                         </div>
                     </div>
 
@@ -55,7 +53,7 @@
                     <!-- /.box-body -->
                     <div class="box-footer">
                         <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
-                        <button type="button" id="uploadSuccess{{$id}}" onclick="window.location.reload()" class="btn btn-info pull-right">上传完成</button>
+                        <button type="button" id="uploadSuccess{{$id}}" onclick="window.location.reload()" class="btn btn-success pull-right">上传完成</button>
                     </div>
                     <!-- /.box-footer -->
                 </form>

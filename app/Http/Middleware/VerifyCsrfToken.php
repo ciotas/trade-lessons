@@ -14,6 +14,8 @@ class VerifyCsrfToken extends Middleware
     protected $except = [
         'videos/return/back',
         'vod/decrypt',
-        'video/upload'
+        'video/upload',
+        'video/refresh/upload',
+        'videos/update/videoId'
     ];
 }

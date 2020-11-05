@@ -17,6 +17,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+//Route::get('test', 'VideoController@test');
 // 视频处理完成回调地址
 Route::post('videos/return/back', 'VideoController@acceptVodReturn')->name('videos.return.back');
 // 解密服务
@@ -25,7 +26,6 @@ Route::get('vod/decrypt', 'VideoController@vodDecrypt')->name('vod.decrypt');
 Route::post('video/upload', 'VideoController@upload')->name('video.upload');
 // 更新videoId
 Route::post('videos/update/videoId', 'VideoController@updateVideoId')->name('videos.update.videoId');
-
 // 视频更新
 Route::post('video/refresh/upload', 'VideoController@refreshUpload')->name('video.refreshUpload');
 

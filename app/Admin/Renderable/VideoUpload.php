@@ -16,13 +16,16 @@ class VideoUpload extends LazyRenderable
     ];
 
     public static $css = [
-        'https://g.alicdn.com/de/prismplayer/2.8.2/skins/default/aliplayer-min.css'
+        'https://g.alicdn.com/de/prismplayer/2.8.2/skins/default/aliplayer-min.css',
+        'css/spiner.css'
     ];
 
-    protected function addScript($id, $lesson_id, $region, $ali_user_id, $createUrl, $refreshUrl, $updateVideoIdUrl, $csrf_token)
+    protected function addScript($id, $lesson_id, $region, $ali_user_id, $createUrl, $refreshUrl, $updateVideoIdUrl)
     {
         Admin::script(
             <<<JS
+            $('#spinner$id').hide()
+            $('#uploadSuccess$id').attr('disabled', true)
             if (!FileReader.prototype.readAsBinaryString) {
                 FileReader.prototype.readAsBinaryString = function (fileData) {
                   var binary = "";
@@ -60,7 +63,7 @@ class VideoUpload extends LazyRenderable
                       console.log('addFileSuccess')
                       $('#authUpload$id').attr('disabled', false)
                       $('#resumeUpload$id').attr('disabled', false)
-                      $('#status$id').html('<span class="label label-success">添加文件成功, 等待上传...</span>')
+                      $('#status$id').html('<span class="badge badge-success">添加文件成功, 等待上传...</span>')
                       console.log("addFileSuccess: " + uploadInfo.file.name)
                     },
                     // 开始上传
@@ -74,7 +77,7 @@ class VideoUpload extends LazyRenderable
                       // 如果 uploadInfo.videoId 存在, 调用 刷新视频上传凭证接口(https://help.aliyun.com/document_detail/55408.html)
                       // 如果 uploadInfo.videoId 不存在,调用 获取视频上传地址和凭证接口(https://help.aliyun.com/document_detail/55407.html)
                       if (!uploadInfo.videoId) {
-                        createUpload(uploader, uploadInfo, $lesson_id, $id, '$createUrl', '$refreshUrl', '$updateVideoIdUrl', '$csrf_token')
+                        createUpload(uploader, uploadInfo, $lesson_id, $id, '$createUrl', '$refreshUrl', '$updateVideoIdUrl')
                         $('#spinner$id').show()
                         var tip = '<span>文件开始上传...</span>'
                         $('#status$id').html(tip)
@@ -85,10 +88,10 @@ class VideoUpload extends LazyRenderable
                         // 如果videoId有值，根据videoId刷新上传凭证
                         var refreshUrl = '$refreshUrl'
                         $.post(refreshUrl,
-                          {videoId: uploadInfo.videoId, _token : '{{ csrf_token()}}' },
+                          {videoId: uploadInfo.videoId},
                           function (data) {
                             if (data.code == 404) {
-                              createUpload(uploader, uploadInfo, $lesson_id, $id, '$createUrl', '$refreshUrl', '$updateVideoIdUrl', '$csrf_token')
+                              createUpload(uploader, uploadInfo, $lesson_id, $id, '$createUrl', '$refreshUrl', '$updateVideoIdUrl')
                             } else {
                               var uploadAuth = data.UploadAuth
                               var uploadAddress = data.UploadAddress
@@ -103,23 +106,22 @@ class VideoUpload extends LazyRenderable
                     onUploadSucceed: function (uploadInfo) {
                       console.log('文件上传成功, 同步到数据库')
                       console.log(uploadInfo.videoId)
-                      // postVideoId('$id' ,uploadInfo.videoId)
                       console.log("onUploadSucceed: " + uploadInfo.file.name + ", endpoint:" + uploadInfo.endpoint + ", bucket:" + uploadInfo.bucket + ", object:" + uploadInfo.object)
                       $('#spinner$id').hide()
-                      $('#status$id').html('<span class="label label-success">文件上传成功!</span>')
+                      $('#status$id').html('<span class="badge badge-success">文件上传成功!</span>')
                       $('#uploadSuccess$id').attr('disabled', false)
                     },
                     // 文件上传失败
                     onUploadFailed: function (uploadInfo, code, message) {
                       console.log("onUploadFailed: file:" + uploadInfo.file.name + ",code:" + code + ", message:" + message)
                       $('#spinner$id').hide()
-                      $('#status$id').html('<span class="label label-danger">文件上传失败!请重新上传～</span>')
+                      $('#status$id').html('<span class="badge badge-danger">文件上传失败!请重新上传～</span>')
                     },
                     // 取消文件上传
                     onUploadCanceled: function (uploadInfo, code, message) {
                       console.log("Canceled file: " + uploadInfo.file.name + ", code: " + code + ", message:" + message)
                       $('#spinner$id').hide()
-                      $('#status$id').html('<span class="label label-warning">文件上传已暂停!</span>')
+                      $('#status$id').html('<span class="badge badge-warning">文件上传已暂停!</span>')
                     },
                     // 文件上传进度，单位：字节, 可以在这个函数中拿到上传进度并显示在页面上
                     onUploadProgress: function (uploadInfo, totalSize, progress) {
@@ -136,11 +138,11 @@ class VideoUpload extends LazyRenderable
                       // 上传大文件超时, 如果是上传方式一即根据 UploadAuth 上传时
                       // 需要根据 uploadInfo.videoId 调用刷新视频上传凭证接口(https://help.aliyun.com/document_detail/55408.html)重新获取 UploadAuth
                       // 然后调用 resumeUploadWithAuth 方法, 这里是测试接口, 所以我直接获取了 UploadAuth
-                      $('#status$id').html('<span class="label label-danger">文件上传超时!请重新上传～</span>')
+                      $('#status$id').html('<span class="badge badge-danger">文件上传超时!请重新上传～</span>')
                       $('#spinner$id').hide()
                       let refreshUrl = '$refreshUrl'
                       $.post(refreshUrl,
-                        {videoId: uploadInfo.videoId, _token : '{{ csrf_token()}}' },
+                        {videoId: uploadInfo.videoId},
                         function (data) {
                           var uploadAuth = data.UploadAuth
                           uploader.resumeUploadWithAuth(uploadAuth)
@@ -149,7 +151,7 @@ class VideoUpload extends LazyRenderable
                     },
                     // 全部文件上传结束
                     onUploadEnd: function (uploadInfo) {
-                      $('#status$id').html('<span class="label label-success">文件上传完毕!</span>')
+                      $('#status$id').html('<span class="badge badge-success">文件上传完毕!</span>')
                       $('#spinner$id').hide()
                       console.log("onUploadEnd: uploaded all the files")
                     }
@@ -214,10 +216,10 @@ class VideoUpload extends LazyRenderable
                 })
               })
 
-              function postVideoId(video_id, videoId, updateVideoIdUrl, csrf_token) {
+              function postVideoId(video_id, videoId, updateVideoIdUrl) {
                 $.post(
                   updateVideoIdUrl,
-                  {_token: csrf_token, 'video_id': video_id, 'videoId': videoId },
+                  {'video_id': video_id, 'videoId': videoId },
                   function(data) {
                     console.log('return data')
                     console.log(data)
@@ -225,18 +227,18 @@ class VideoUpload extends LazyRenderable
                 );
               }
 
-              function createUpload(uploader, uploadInfo, lesson_id, video_id, createUrl, refreshUrl, updateVideoIdUrl, csrf_token) {
+              function createUpload(uploader, uploadInfo, lesson_id, video_id, createUrl, refreshUrl, updateVideoIdUrl) {
                 var exts = uploadInfo.file.name.split('.')
                 var ext = exts.pop()
                 console.log(createUrl)
                 $.post(createUrl,
-                  {lesson_id: lesson_id, 'ext': ext, _token : csrf_token},
+                  {lesson_id: lesson_id, 'ext': ext},
                   function(data) {
                     var uploadAuth = data.UploadAuth
                     var uploadAddress = data.UploadAddress
                     var videoId = data.VideoId
                     uploader.setUploadAuthAndAddress(uploadInfo, uploadAuth, uploadAddress, videoId)
-                    postVideoId(video_id, videoId, updateVideoIdUrl, csrf_token)
+                    postVideoId(video_id, videoId, updateVideoIdUrl)
                   }, 'json')
               }
 JS
@@ -255,8 +257,7 @@ JS
             env('ALIYUN_USER_ID'),
             route('video.upload'),
             route('video.refreshUpload'),
-            route('videos.update.videoId'),
-            csrf_token()
+            route('videos.update.videoId')
         );
         return view('admin.video-upload', ['id'=>$id]);
     }
