@@ -39,6 +39,8 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function () {
     Route::get('/lessons', function () {
         return Inertia\Inertia::render('Lesson/Lessons');
     })->name('lessons');
+
+    Route::get('/lessons/{lesson_id}', 'LessonController@show')->name('lesson');
 });
 
 
