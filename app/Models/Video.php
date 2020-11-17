@@ -10,7 +10,7 @@ class Video extends Model
 {
 	use HasDateTimeFormatter;
 
-	protected $fillable = ['name', 'videoId', 'lesson_id', 'duration', 'cover_url'];
+	protected $fillable = ['name', 'videoId', 'lesson_id', 'duration', 'cover_url', 'sort'];
 
     const VOD_STATUS_READY    = 'ready';
     const VOD_STATUS_UPLOADING = 'uploading';
@@ -23,4 +23,9 @@ class Video extends Model
         self::VOD_STATUS_TRANSFER_CODE => '转码中',
         self::VOD_STATUS_TRANSFER_DONE => '转码完成'
     ];
+
+    public function lesson()
+    {
+        return $this->belongsTo(Lesson::class);
+    }
 }

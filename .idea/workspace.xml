@@ -2,19 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a7877c7d-a63c-4b66-8874-7710602e843c" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.env.example" beforeDir="false" afterPath="$PROJECT_DIR$/.env.example" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/tongmeng.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/tongmeng.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Admin/Renderable/VideoUpload.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Admin/Renderable/VideoUpload.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/VideoController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/VideoController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Middleware/VerifyCsrfToken.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Middleware/VerifyCsrfToken.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Jobs/CoverVideoJob.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Jobs/CoverVideoJob.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Admin/Controllers/LessonController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Admin/Controllers/LessonController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Admin/Controllers/VideoController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Admin/Controllers/VideoController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Lesson.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Lesson.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Video.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Video.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/app.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/queue.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/queue.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/video-upload.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/video-upload.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/mix-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/mix-manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/Pages/Dashboard.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/Pages/Dashboard.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/Pages/Home/Case.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/Pages/Home/Case.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/Pages/Home/Feature.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/Pages/Home/Feature.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/Pages/Home/Hero.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/Pages/Home/Hero.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/lang/zh_CN/video.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/zh_CN/video.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -167,6 +171,7 @@
       <path value="$PROJECT_DIR$/vendor/symfony/psr-http-message-bridge" />
       <path value="$PROJECT_DIR$/vendor/laravel/horizon" />
       <path value="$PROJECT_DIR$/vendor/predis/predis" />
+      <path value="$PROJECT_DIR$/vendor/dcat/laravel-wherehasin" />
     </include_path>
   </component>
   <component name="ProjectId" id="1jgApcA8ouJ3fhoQO95R1hy6G10" />
@@ -260,12 +265,25 @@
       <workItem from="1604581734086" duration="506000" />
       <workItem from="1604582644082" duration="2996000" />
       <workItem from="1604586842857" duration="89000" />
-      <workItem from="1604586949159" duration="467000" />
+      <workItem from="1604586949159" duration="766000" />
+      <workItem from="1604627972486" duration="1095000" />
+      <workItem from="1604630699676" duration="1361000" />
+      <workItem from="1604650734618" duration="501000" />
+      <workItem from="1604657048834" duration="797000" />
+      <workItem from="1604676661301" duration="535000" />
+      <workItem from="1604751597828" duration="882000" />
+      <workItem from="1605062806786" duration="6221000" />
+      <workItem from="1605084232350" duration="9183000" />
+      <workItem from="1605166973717" duration="890000" />
+      <workItem from="1605602188148" duration="1982000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName="*.log" />
   </component>
   <component name="WindowStateProjectService">
     <state x="364" y="196" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1604286142228">
@@ -276,9 +294,10 @@
       <screen x="0" y="23" width="1280" height="727" />
     </state>
     <state x="378" y="148" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.23.1280.727@0.23.1280.727" timestamp="1604571312482" />
-    <state x="305" y="74" width="670" height="676" key="search.everywhere.popup" timestamp="1604583449956">
+    <state x="305" y="74" width="670" height="676" key="search.everywhere.popup" timestamp="1605606617935">
       <screen x="0" y="23" width="1280" height="727" />
     </state>
-    <state x="305" y="74" width="670" height="676" key="search.everywhere.popup/0.23.1280.727@0.23.1280.727" timestamp="1604583449956" />
+    <state x="305" y="74" width="670" height="675" key="search.everywhere.popup/0.23.1280.725@0.23.1280.725" timestamp="1604657061894" />
+    <state x="305" y="74" width="670" height="676" key="search.everywhere.popup/0.23.1280.727@0.23.1280.727" timestamp="1605606617935" />
   </component>
 </project>

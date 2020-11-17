@@ -14,7 +14,8 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return \Illuminate\Support\Facades\Redirect::to('/dashboard');
+//    return view('welcome');
 });
 
 //Route::get('test', 'VideoController@test');
@@ -30,6 +31,7 @@ Route::post('videos/update/videoId', 'VideoController@updateVideoId')->name('vid
 Route::post('video/refresh/upload', 'VideoController@refreshUpload')->name('video.refreshUpload');
 
 Route::middleware(['auth:sanctum', 'verified'])->group(function () {
+
     Route::get('/dashboard', function () {
         return Inertia\Inertia::render('Dashboard');
     })->name('dashboard');
@@ -37,10 +39,7 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function () {
     Route::get('/lessons', function () {
         return Inertia\Inertia::render('Lesson/Lessons');
     })->name('lessons');
-
-
 });
 
-//Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
-//    return Inertia\Inertia::render('Dashboard');
-//})->name('dashboard');
+
+

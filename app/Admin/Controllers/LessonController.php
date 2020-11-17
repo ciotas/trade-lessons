@@ -88,14 +88,21 @@ class LessonController extends AdminController
         return Form::make(new Lesson('tags'), function (Form $form) {
             $form->display('id');
             $form->text('name')->required();
-            $form->multipleSelectTable('tags')
-                ->from(TagTable::make([]))  //'id' => $form->getKey() 设置渲染类实例，并传递自定义参数
-                ->model(Tag::class, 'id', 'name')  // 设置编辑数据显示
+            $form->multipleSelect('tags')
+                 ->options(Tag::all()->pluck('name', 'id'))
                 ->customFormat(function ($v) {
                     if (!$v) return [];
-                    // 这一步非常重要，需要把数据库中查出来的二维数组转化成一维数组
                     return array_column($v, 'id');
                 });
+//            $form->multipleSelectTable('tags')
+//                ->from(TagTable::make([]))  // 'id' => $form->getKey() 设置渲染类实例，并传递自定义参数
+//                ->model(Tag::class, 'id', 'name')  // 设置编辑数据显示
+//                ->customFormat(function ($v) {
+//                    if (!$v) return [];
+//                    // 这一步非常重要，需要把数据库中查出来的二维数组转化成一维数组
+//                    return array_column($v, 'id');
+//                });
+
             $form->decimal('price');
             $form->decimal('crossed_price');
             $form->select('type_id')->options(Type::all()->pluck('name', 'id'));

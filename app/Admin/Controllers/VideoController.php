@@ -23,8 +23,14 @@ class VideoController extends AdminController
     protected function grid()
     {
         return Grid::make(new Video(), function (Grid $grid) {
-            $grid->column('id')->sortable();
-            $grid->column('name');
+            $grid->selector(function (Grid\Tools\Selector $selector) {
+                $selector->selectOne('lesson_id', Lesson::all()->pluck('name', 'id')->toArray());
+            });
+
+            $grid->model()->orderBy('sort', 'asc');
+            $grid->column('name')->display(function ($name) {
+                return $this->sort.'. '.$name;
+            });
             $grid->column('videoId')
                 ->display(function ($videoId) {
                     if (!$videoId) {
@@ -40,13 +46,13 @@ class VideoController extends AdminController
 
             $grid->column('duration');
             $grid->column('corver_url')->image('', 50,50);
+            $grid->column('sort')->editable();
             $grid->column('lesson_id')->display(function ($val) {
                 return Lesson::find($val)->name ?? '';
             });
 
             $grid->filter(function (Grid\Filter $filter) {
-                $filter->equal('id');
-
+                $filter->like('name');
             });
         });
     }
@@ -85,6 +91,7 @@ class VideoController extends AdminController
             $form->display('id');
             $form->text('name');
             $form->select('lesson_id')->options(Lesson::all()->pluck('name', 'id'));
+            $form->number('sort');
             $form->display('created_at');
             $form->display('updated_at');
         });

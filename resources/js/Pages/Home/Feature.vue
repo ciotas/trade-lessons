@@ -8,7 +8,7 @@
             <div class="lg:text-center">
                 <p class="text-base leading-6 text-indigo-600 font-semibold tracking-wide uppercase"></p>
                 <h3 class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl sm:leading-10">
-                    四大特性
+                    童蒙裸k交易课程特点
                 </h3>
                 <br>
             </div>

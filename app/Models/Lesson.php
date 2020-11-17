@@ -24,4 +24,9 @@ class Lesson extends Model
         return $this->belongsToMany(Tag::class, Tagable::class);
 	}
 
+    public function videos()
+    {
+        return $this->hasMany(Video::class);
+	}
+
 }

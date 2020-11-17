@@ -10,6 +10,7 @@ return [
         'duration' => '时长',
         'corver_url' => '封面',
         'lesson_id' => '所属课程',
+        'sort'     =>  '排序',
     ],
     'options' => [
     ],
