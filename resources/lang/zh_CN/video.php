@@ -11,6 +11,7 @@ return [
         'corver_url' => '封面',
         'lesson_id' => '所属课程',
         'sort'     =>  '排序',
+        'is_free' => '免费'
     ],
     'options' => [
     ],

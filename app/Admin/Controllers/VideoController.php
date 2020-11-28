@@ -28,7 +28,7 @@ class VideoController extends AdminController
             });
 
             $grid->model()->orderBy('sort', 'asc');
-            $grid->column('name')->display(function ($name) {
+            $grid->column('name')->editable(true)->display(function ($name) {
                 return $this->sort.'. '.$name;
             });
             $grid->column('videoId')
@@ -46,7 +46,8 @@ class VideoController extends AdminController
 
             $grid->column('duration');
             $grid->column('corver_url')->image('', 50,50);
-            $grid->column('sort')->editable();
+            $grid->column('sort')->editable(true);
+            $grid->column('is_free')->switch();
             $grid->column('lesson_id')->display(function ($val) {
                 return Lesson::find($val)->name ?? '';
             });
@@ -72,6 +73,9 @@ class VideoController extends AdminController
             $show->field('videoId');
             $show->field('duration');
             $show->field('corver_url')->image();
+            $show->field('is_free')->as(function ($is_free) {
+                return $is_free ? '是' : '否';
+            });
             $show->field('lesson_id')->as(function ($lesson_id) {
                 return Lesson::find($lesson_id)->name ?? '';
             });
@@ -92,6 +96,7 @@ class VideoController extends AdminController
             $form->text('name');
             $form->select('lesson_id')->options(Lesson::all()->pluck('name', 'id'));
             $form->number('sort');
+            $form->switch('is_free');
             $form->display('created_at');
             $form->display('updated_at');
         });

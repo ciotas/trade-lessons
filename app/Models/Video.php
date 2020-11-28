@@ -10,7 +10,11 @@ class Video extends Model
 {
 	use HasDateTimeFormatter;
 
-	protected $fillable = ['name', 'videoId', 'lesson_id', 'duration', 'cover_url', 'sort'];
+	protected $fillable = ['name', 'videoId', 'lesson_id', 'duration', 'cover_url', 'sort', 'is_free'];
+
+	protected $casts = [
+	    'is_free' => 'boolean'
+    ];
 
     const VOD_STATUS_READY    = 'ready';
     const VOD_STATUS_UPLOADING = 'uploading';

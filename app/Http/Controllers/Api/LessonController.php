@@ -19,8 +19,7 @@ class LessonController extends Controller
                 $item->cover_img = Storage::url($item->cover_img);
             }
             return $item;
-        })
-        ;
+        });
         return LessonResource::collection($lessons);
     }
 }

@@ -17,6 +17,5 @@ return [
         'types'         => '分类',
         'lessons'       => '课程',
         'videos'        => '视频',
-
-    ],
+    ]
 ];
