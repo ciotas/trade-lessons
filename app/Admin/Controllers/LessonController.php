@@ -43,6 +43,7 @@ class LessonController extends AdminController
                     return $card;
                 });;
 
+            $grid->toolsWithOutline(false);
             $grid->filter(function (Grid\Filter $filter) {
                 $filter->like('name');
                 $filter->equal('type_id')->select(Type::all()->pluck('name', 'id'));

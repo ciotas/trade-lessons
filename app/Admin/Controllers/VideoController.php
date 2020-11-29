@@ -52,6 +52,7 @@ class VideoController extends AdminController
                 return Lesson::find($val)->name ?? '';
             });
 
+            $grid->toolsWithOutline(false);
             $grid->filter(function (Grid\Filter $filter) {
                 $filter->like('name');
             });

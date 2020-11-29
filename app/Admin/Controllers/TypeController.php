@@ -21,6 +21,8 @@ class TypeController extends AdminController
             $grid->column('id')->sortable();
             $grid->column('name');
             $grid->column('typeId');
+
+            $grid->toolsWithOutline(false);
             $grid->filter(function (Grid\Filter $filter) {
                 $filter->like('name');
             });

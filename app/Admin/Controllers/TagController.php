@@ -20,6 +20,8 @@ class TagController extends AdminController
         return Grid::make(new Tag(), function (Grid $grid) {
             $grid->column('id')->sortable();
             $grid->column('name');
+
+            $grid->toolsWithOutline(false);
             $grid->filter(function (Grid\Filter $filter) {
                 $filter->like('name');
             });
