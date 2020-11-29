@@ -1,26 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="ChangeListManager">
-    <list default="true" id="a7877c7d-a63c-4b66-8874-7710602e843c" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Admin/Controllers/VideoController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Admin/Controllers/VideoController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/admin.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/admin.php" afterDir="false" />
-    </list>
-    <option name="SHOW_DIALOG" value="false" />
-    <option name="HIGHLIGHT_CONFLICTS" value="true" />
-    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
-    <option name="LAST_RESOLUTION" value="IGNORE" />
-  </component>
-  <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
-    <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
-    <execution>
-      <executable />
-    </execution>
-  </component>
-  <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-  </component>
-  <component name="PhpWorkspaceProjectConfiguration">
+  <component name="PhpIncludePathManager">
     <include_path>
       <path value="$PROJECT_DIR$/vendor/sebastian/global-state" />
       <path value="$PROJECT_DIR$/vendor/sebastian/lines-of-code" />
@@ -159,134 +139,9 @@
       <path value="$PROJECT_DIR$/vendor/dcat/laravel-wherehasin" />
     </include_path>
   </component>
-  <component name="ProjectId" id="1jgApcA8ouJ3fhoQO95R1hy6G10" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
-    <ConfirmationsSetting value="1" id="Add" />
-  </component>
-  <component name="ProjectViewState">
-    <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showLibraryContents" value="true" />
-  </component>
-  <component name="PropertiesComponent">
-    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="nodejs_package_manager_path" value="npm" />
-  </component>
-  <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/public/js" />
-      <recent name="$PROJECT_DIR$/public" />
-    </key>
-  </component>
-  <component name="RunManager">
-    <configuration name="phpunit.xml" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
-      <TestRunner scope="XML" />
-      <method v="2" />
-    </configuration>
-  </component>
-  <component name="SvnConfiguration">
-    <configuration />
-  </component>
-  <component name="TaskManager">
-    <task active="true" id="Default" summary="Default task">
-      <changelist id="a7877c7d-a63c-4b66-8874-7710602e843c" name="Default Changelist" comment="" />
-      <created>1604215544215</created>
-      <option name="number" value="Default" />
-      <option name="presentableId" value="Default" />
-      <updated>1604215544215</updated>
-      <workItem from="1604215546099" duration="1018000" />
-      <workItem from="1604282765241" duration="3335000" />
-      <workItem from="1604289522172" duration="8627000" />
-      <workItem from="1604310570720" duration="1323000" />
-      <workItem from="1604367135752" duration="6371000" />
-      <workItem from="1604384617053" duration="183000" />
-      <workItem from="1604384858153" duration="618000" />
-      <workItem from="1604385691985" duration="510000" />
-      <workItem from="1604386214239" duration="1287000" />
-      <workItem from="1604406947199" duration="5660000" />
-      <workItem from="1604460800422" duration="896000" />
-      <workItem from="1604462337288" duration="3364000" />
-      <workItem from="1604474086228" duration="656000" />
-      <workItem from="1604475240878" duration="132000" />
-      <workItem from="1604475498265" duration="2969000" />
-      <workItem from="1604479652383" duration="58000" />
-      <workItem from="1604479712574" duration="14000" />
-      <workItem from="1604480138239" duration="1033000" />
-      <workItem from="1604483543553" duration="757000" />
-      <workItem from="1604492762875" duration="353000" />
-      <workItem from="1604493187960" duration="1065000" />
-      <workItem from="1604495036086" duration="148000" />
-      <workItem from="1604495469006" duration="318000" />
-      <workItem from="1604497919144" duration="359000" />
-      <workItem from="1604499759078" duration="23000" />
-      <workItem from="1604499795734" duration="7000" />
-      <workItem from="1604499833138" duration="45000" />
-      <workItem from="1604499945773" duration="83000" />
-      <workItem from="1604500056306" duration="362000" />
-      <workItem from="1604501092365" duration="2658000" />
-      <workItem from="1604544067035" duration="535000" />
-      <workItem from="1604547012590" duration="96000" />
-      <workItem from="1604548899839" duration="1516000" />
-      <workItem from="1604550986906" duration="2016000" />
-      <workItem from="1604553667022" duration="158000" />
-      <workItem from="1604556850121" duration="1271000" />
-      <workItem from="1604558313022" duration="138000" />
-      <workItem from="1604558494059" duration="802000" />
-      <workItem from="1604559549006" duration="465000" />
-      <workItem from="1604560271979" duration="84000" />
-      <workItem from="1604560359800" duration="13000" />
-      <workItem from="1604560449629" duration="352000" />
-      <workItem from="1604560937824" duration="2476000" />
-      <workItem from="1604563787887" duration="3895000" />
-      <workItem from="1604569861862" duration="745000" />
-      <workItem from="1604570932507" duration="102000" />
-      <workItem from="1604571104322" duration="27000" />
-      <workItem from="1604571187203" duration="93000" />
-      <workItem from="1604571290691" duration="6000" />
-      <workItem from="1604571307311" duration="31000" />
-      <workItem from="1604571412758" duration="54000" />
-      <workItem from="1604571481846" duration="2036000" />
-      <workItem from="1604581734086" duration="506000" />
-      <workItem from="1604582644082" duration="2996000" />
-      <workItem from="1604586842857" duration="89000" />
-      <workItem from="1604586949159" duration="766000" />
-      <workItem from="1604627972486" duration="1095000" />
-      <workItem from="1604630699676" duration="1361000" />
-      <workItem from="1604650734618" duration="501000" />
-      <workItem from="1604657048834" duration="797000" />
-      <workItem from="1604676661301" duration="535000" />
-      <workItem from="1604751597828" duration="882000" />
-      <workItem from="1605062806786" duration="6221000" />
-      <workItem from="1605084232350" duration="9183000" />
-      <workItem from="1605166973717" duration="890000" />
-      <workItem from="1605602188148" duration="3923000" />
-      <workItem from="1606275145705" duration="26000" />
-      <workItem from="1606540184020" duration="5895000" />
-      <workItem from="1606547091568" duration="430000" />
-      <workItem from="1606547551190" duration="2325000" />
-    </task>
-    <servers />
-  </component>
-  <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
-  </component>
-  <component name="UnknownFeatures">
-    <option featureType="com.intellij.fileTypeFactory" implementationName="*.log" />
-  </component>
-  <component name="WindowStateProjectService">
-    <state x="364" y="196" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1604286142228">
-      <screen x="0" y="23" width="1280" height="727" />
-    </state>
-    <state x="364" y="196" key="#com.intellij.fileTypes.FileTypeChooser/0.23.1280.727@0.23.1280.727" timestamp="1604286142228" />
-    <state x="378" y="148" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1605619215857">
-      <screen x="0" y="23" width="1280" height="727" />
-    </state>
-    <state x="378" y="148" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.23.1280.727@0.23.1280.727" timestamp="1605619215857" />
-    <state x="305" y="74" width="670" height="676" key="search.everywhere.popup" timestamp="1606655137486">
-      <screen x="0" y="23" width="1280" height="727" />
-    </state>
-    <state x="305" y="74" width="670" height="675" key="search.everywhere.popup/0.23.1280.725@0.23.1280.725" timestamp="1604657061894" />
-    <state x="305" y="74" width="670" height="676" key="search.everywhere.popup/0.23.1280.727@0.23.1280.727" timestamp="1606655137486" />
+  <component name="PhpUnit">
+    <phpunit_settings>
+      <PhpUnitSettings configuration_file_path="$PROJECT_DIR$/phpunit.xml" custom_loader_path="$PROJECT_DIR$/vendor/autoload.php" use_configuration_file="true" />
+    </phpunit_settings>
   </component>
 </project>

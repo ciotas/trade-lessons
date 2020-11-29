@@ -221,7 +221,7 @@ return [
     'upload' => [
 
         // Disk in `config/filesystem.php`.
-        'disk' => 'public',
+        'disk' => 'oss',
 
         // Image and file upload path under the disk above.
         'directory' => [
@@ -277,14 +277,14 @@ return [
         // default, blue, blue-light, green
         'color' => 'default',
 
-        'body_class' => '',
+        'body_class' => 'sidebar-separate',
 
-        'sidebar_collapsed' => false,
+        'sidebar_collapsed' => true,
 
         // light, primary, dark
-        'sidebar_style' => 'light',
+        'sidebar_style' => 'dark',
 
-        'dark_mode_switch' => false,
+        'dark_mode_switch' => true,
 
         // bg-primary, bg-info, bg-warning, bg-success, bg-danger, bg-dark
         'navbar_color' => '',

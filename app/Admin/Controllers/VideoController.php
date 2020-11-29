@@ -28,7 +28,7 @@ class VideoController extends AdminController
             });
 
             $grid->model()->orderBy('sort', 'asc');
-            $grid->column('name')->editable(true)->display(function ($name) {
+            $grid->column('name')->display(function ($name) {
                 return $this->sort.'. '.$name;
             });
             $grid->column('videoId')
