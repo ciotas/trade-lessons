@@ -22,6 +22,7 @@ Route::get('/', function () {
 // 视频处理完成回调地址
 Route::post('videos/return/back', 'VideoController@acceptVodReturn')->name('videos.return.back');
 // 解密服务
+
 Route::get('vod/decrypt', 'VideoController@vodDecrypt')->name('vod.decrypt');
 // 视频上传
 Route::post('video/upload', 'VideoController@upload')->name('video.upload');

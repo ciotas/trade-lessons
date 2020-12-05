@@ -3516,7 +3516,7 @@ __webpack_require__.r(__webpack_exports__);
   components: {
     AppLayout: _Layouts_AppLayout__WEBPACK_IMPORTED_MODULE_0__["default"]
   },
-  props: ['lessons'],
+  props: ['lesson'],
   data: function data() {
     return {};
   }
@@ -26653,10 +26653,11 @@ var render = function() {
                       ])
                     : _c("div", { staticClass: "px-6 py-4" }, [
                         _c(
-                          "button",
+                          "a",
                           {
                             staticClass:
-                              "bg-transparent hover:bg-blue-500 text-indigo-600 font-semibold hover:text-white py-2 px-4 border border-indigo-600 hover:border-transparent rounded"
+                              "bg-transparent hover:bg-blue-500 text-indigo-600 font-semibold hover:text-white py-2 px-4 border border-indigo-600 hover:border-transparent rounded",
+                            attrs: { href: "/lessons/" + lesson.id }
                           },
                           [
                             _vm._v(
@@ -27591,11 +27592,7 @@ var render = function() {
                   staticClass:
                     "font-semibold text-xl text-gray-800 leading-tight"
                 },
-                [
-                  _vm._v(
-                    "\n            课程 " + _vm._s(_vm.lessons) + "\n        "
-                  )
-                ]
+                [_vm._v("\n            " + _vm._s(_vm.lesson) + "\n        ")]
               )
             ]
           },

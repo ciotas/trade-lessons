@@ -2,12 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a7877c7d-a63c-4b66-8874-7710602e843c" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/jsLinters/jshint.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jsLinters/jshint.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Admin/Controllers/LessonController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Admin/Controllers/LessonController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Admin/Controllers/TagController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Admin/Controllers/TagController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Admin/Controllers/TypeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Admin/Controllers/TypeController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Admin/Controllers/VideoController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Admin/Controllers/VideoController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/admin.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/admin.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/LessonController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/LessonController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/admin.sql" beforeDir="false" afterPath="$PROJECT_DIR$/database/admin.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/mix-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/mix-manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/Pages/Home/Case.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/Pages/Home/Case.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/Pages/Lesson/Lesson.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/Pages/Lesson/Lesson.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -175,6 +180,8 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="configurable.group.appearance" />
+    <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -267,7 +274,12 @@
       <workItem from="1606275145705" duration="26000" />
       <workItem from="1606540184020" duration="5895000" />
       <workItem from="1606547091568" duration="430000" />
-      <workItem from="1606547551190" duration="2966000" />
+      <workItem from="1606547551190" duration="3045000" />
+      <workItem from="1606708384182" duration="4000" />
+      <workItem from="1606915109187" duration="201000" />
+      <workItem from="1606960195277" duration="53000" />
+      <workItem from="1606976264837" duration="237000" />
+      <workItem from="1607093600355" duration="2736000" />
     </task>
     <servers />
   </component>
@@ -278,6 +290,14 @@
     <option featureType="com.intellij.fileTypeFactory" implementationName="*.log" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="240" y="51" key="#Inspections" timestamp="1607096707687">
+      <screen x="0" y="23" width="1280" height="725" />
+    </state>
+    <state x="240" y="51" key="#Inspections/0.23.1280.725@0.23.1280.725" timestamp="1607096707687" />
+    <state x="240" y="51" key="#JSHint" timestamp="1607095031615">
+      <screen x="0" y="23" width="1280" height="725" />
+    </state>
+    <state x="240" y="51" key="#JSHint/0.23.1280.725@0.23.1280.725" timestamp="1607095031615" />
     <state x="364" y="196" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1604286142228">
       <screen x="0" y="23" width="1280" height="727" />
     </state>
@@ -286,10 +306,14 @@
       <screen x="0" y="23" width="1280" height="727" />
     </state>
     <state x="378" y="148" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.23.1280.727@0.23.1280.727" timestamp="1605619215857" />
-    <state x="305" y="74" width="670" height="676" key="search.everywhere.popup" timestamp="1606658206879">
-      <screen x="0" y="23" width="1280" height="727" />
+    <state x="141" y="24" key="SettingsEditor" timestamp="1607095073338">
+      <screen x="0" y="23" width="1280" height="725" />
     </state>
-    <state x="305" y="74" width="670" height="675" key="search.everywhere.popup/0.23.1280.725@0.23.1280.725" timestamp="1604657061894" />
+    <state x="141" y="24" key="SettingsEditor/0.23.1280.725@0.23.1280.725" timestamp="1607095073338" />
+    <state x="305" y="74" width="670" height="675" key="search.everywhere.popup" timestamp="1607093634883">
+      <screen x="0" y="23" width="1280" height="725" />
+    </state>
+    <state x="305" y="74" width="670" height="675" key="search.everywhere.popup/0.23.1280.725@0.23.1280.725" timestamp="1607093634883" />
     <state x="305" y="74" width="670" height="676" key="search.everywhere.popup/0.23.1280.727@0.23.1280.727" timestamp="1606658206879" />
   </component>
 </project>

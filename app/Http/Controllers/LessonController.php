@@ -10,7 +10,7 @@ class LessonController extends Controller
 {
     public function show($lesson_id, Request $request)
     {
-        $lessons = Lesson::with('type', 'tags', 'videos')->find($lesson_id);
-        return Inertia::render('Lesson/Lesson', ['lessons'=>$lessons]);
+        $lesson = Lesson::with('type', 'tags', 'videos')->find($lesson_id);
+        return Inertia::render('Lesson/Lesson', ['lesson'=>$lesson]);
     }
 }

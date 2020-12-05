@@ -17,9 +17,9 @@
                             </button>
                         </div>
                         <div class="px-6 py-4" v-else>
-                            <button class="bg-transparent hover:bg-blue-500 text-indigo-600 font-semibold hover:text-white py-2 px-4 border border-indigo-600 hover:border-transparent rounded">
+                            <a :href=" '/lessons/' + lesson.id" class="bg-transparent hover:bg-blue-500 text-indigo-600 font-semibold hover:text-white py-2 px-4 border border-indigo-600 hover:border-transparent rounded">
                                 立即解锁
-                            </button>
+                            </a>
                         </div>
 
                     </div>

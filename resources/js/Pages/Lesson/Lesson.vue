@@ -2,7 +2,7 @@
     <app-layout>
         <template #header>
             <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-                {{ lessons }}
+                {{ lesson }}
             </h2>
         </template>
 
@@ -21,7 +21,7 @@
         components: {
             AppLayout,
         },
-        props: ['lessons'],
+        props: ['lesson'],
         data() {
             return {
 
